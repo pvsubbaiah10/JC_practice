@@ -5,16 +5,18 @@ public class Test {
 
 		String str = "Java is easy";
 		
+		String rev[]=str.split(" ");
+
+
+         for(String word : rev) {
+        	 String rev1="";
+
+          for(int i=word.length()-1;i>=0;i--) {
+         	 rev1=rev1+word.charAt(i);
+
+          }
 		
-	
-	
-		for(int i=str.length()-1;i>=0;i--) {
-			
-			
-		 
-			System.out.print(str.charAt(i));
-		
-		
+		System.out.print(rev1+" ");
 	}
 	}
 

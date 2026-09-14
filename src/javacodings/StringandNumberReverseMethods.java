@@ -86,6 +86,9 @@ public class StringandNumberReverseMethods {
 	 }
 	 
 	 System.out.println();
+	 
+
+	 
 
 	// **** Reverse String Without Changing Special Characters
 
@@ -162,7 +165,7 @@ public class StringandNumberReverseMethods {
 	
 	 System.out.println();
 	
-      // Reverse an Array CHANGING arr
+      // Reverse an Array total CHANGING arr
 	 
 	 int AR[]= {1,2,3,4,5,6,7};
 	 
@@ -208,6 +211,32 @@ public class StringandNumberReverseMethods {
     	
     }
 	System.out.println(new String(rs));
+	
+	 System.out.println();
+	 
+	 System.out.println("*********** op4 ************");
+	 
+	// op4 ==  avaJ is easy
+	 
+	 String str5 = "Java is easy";
+	 
+	 char[] arr4=str5.toCharArray();
+	 
+	 int cl=0;
+	 int cr=str5.indexOf(" ")-1;
+	 
+	 while(cl<cr) {
+		 
+		 char ct =arr4[cl];
+		 arr4[cl]=arr4[cr];
+		 arr4[cr]=ct;
+		 
+		 cl++;
+		 cr--;
+	 }
+	 
+	 System.out.println(new String(arr4));
+	
 
 }
 }

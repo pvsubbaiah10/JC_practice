@@ -1,23 +1,31 @@
 
 public class Test {
 
+	
+	static int c=0;
+	
 	public static void main(String[] args) {
-
-		String str = "Java is easy";
 		
-		String rev[]=str.split(" ");
-
-
-         for(String word : rev) {
-        	 String rev1="";
-
-          for(int i=word.length()-1;i>=0;i--) {
-         	 rev1=rev1+word.charAt(i);
-
-          }
+		String str="abc";
 		
-		System.out.print(rev1+" ");
-	}
+		per(str,"");
+		System.out.println(c);
+
+
 	}
 
+	static void per(String str,String prefix) {
+		if(str.length()==0) {
+			System.out.println(prefix);
+			c++;
+		}else {
+			for(int i=0;i<str.length();i++){
+				String r=str.substring(0,i)+str.substring(i+1);
+				per(r,prefix+str.charAt(i));
+			}
+		}
+		
+	}
+	
+	
 }

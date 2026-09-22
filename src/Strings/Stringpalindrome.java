@@ -4,22 +4,16 @@ public class Stringpalindrome {
 
 	public static void main(String[] args) {
 		
-		String a = "madam";
-
-		String rev="";
+	String a = "madam";
 		
-		char ch;
+		String r="";
 		
-		for(int i=0;i<a.length();i++) {
-			
-			ch=a.charAt(i);
-			rev=ch+rev;
-					
+		for(int i=a.length()-1;i>=0;i--) {
+			r=r+a.charAt(i);
 		}
-
-		System.out.println(rev);
 		
-		if(rev.equals(a)) {
+		
+		if(r.equals(a)) {
 			System.out.println("p");
 		}else {
 			System.out.println("np");

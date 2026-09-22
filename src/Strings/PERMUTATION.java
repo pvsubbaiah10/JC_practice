@@ -3,7 +3,7 @@ package Strings;
 public class PERMUTATION {
 	 static int c = 0;
 	public static void main(String[] args) {
-		String str = "abcq";
+		String str = "abc";
 		permute(str, "");
 		System.out.println("Total permutations = " + c);
 	}

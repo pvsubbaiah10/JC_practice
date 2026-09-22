@@ -26,7 +26,7 @@ public class Primenumbers {
 		// prime numbers print
 
 		
-		  int n = 200; int c = 0;
+		  int n = 300; int c = 0;
 		  
 		  for (int num = 100; num <= n; num++) {
 		  

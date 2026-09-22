@@ -21,7 +21,7 @@ public class DuplicateCharsinString {
 				continue;
 			map.put(ch, map.getOrDefault(ch, 0) + 1);
 		}
-		 System.out.println(map);
+		 //System.out.println(map);
 
 		for (Map.Entry<Character, Integer> mapkv : map.entrySet()) {
 			if (mapkv.getValue() > 1) {

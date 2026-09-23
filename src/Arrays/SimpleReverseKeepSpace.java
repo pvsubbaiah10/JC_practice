@@ -20,8 +20,9 @@ public class SimpleReverseKeepSpace {
 			}else {
 				while(c[j]==' ') 
 					j--;
-					res[i]=c[j--];
-				
+							
+				res[i]=c[j];
+				   j--;
 				
 			}
 			

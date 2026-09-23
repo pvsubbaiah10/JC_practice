@@ -1,31 +1,32 @@
 
 public class Test {
 
-	
-	static int c=0;
-	
 	public static void main(String[] args) {
+
 		
-		String str="abc";
+		String s = "abcabcbb";
 		
-		per(str,"");
-		System.out.println(c);
-
-
-	}
-
-	static void per(String str,String prefix) {
-		if(str.length()==0) {
-			System.out.println(prefix);
-			c++;
-		}else {
-			for(int i=0;i<str.length();i++){
-				String r=str.substring(0,i)+str.substring(i+1);
-				per(r,prefix+str.charAt(i));
+		String c="";
+		int m=0;
+		String l="";
+		
+		
+		for(char ch:s.toCharArray()) {
+			if(c.indexOf(ch)!=-1) {
+				c=c.substring(c.indexOf(ch)+1);
+			}
+			
+			c+=ch;
+			m=Math.max(m, c.length());
+			if(c.length()>l.length()) {
+				l=c;
 			}
 		}
 		
-	}
-	
-	
+
+		
+		System.out.println(m);
+		System.out.println(l);
+	}	
+
 }

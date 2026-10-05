@@ -1,6 +1,5 @@
 package Strings;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Map;
@@ -11,25 +10,7 @@ public class DuplicateCharsinString {
 
 	public static void main(String[] args) {
 
-		String input = "Learn Java Programming";
-
-		// using hash map
-		Map<Character, Integer> map = new HashMap<>();
-
-		for (char ch : input.toCharArray()) {
-			if (ch == ' ')
-				continue;
-			map.put(ch, map.getOrDefault(ch, 0) + 1);
-		}
-		 //System.out.println(map);
-
-		for (Map.Entry<Character, Integer> mapkv : map.entrySet()) {
-			if (mapkv.getValue() > 1) {
-
-				System.out.println(mapkv.getKey() + "-->" + mapkv.getValue());
-
-			}
-		}
+		String input = "Programming";
 
 		// using set print only duplicates
 
@@ -50,8 +31,19 @@ public class DuplicateCharsinString {
 		}
 
 		System.out.println();
-		System.out.println(set);
+		// System.out.println(set);
 		System.out.println(duplicates);
+
+		// without set print only duplicates
+
+		for (int i = 0; i < input.length(); i++) {
+
+			char ch = input.charAt(i);
+
+			if (input.indexOf(ch) != input.lastIndexOf(ch) && input.indexOf(ch) == i) {
+				System.out.print(ch+" ");
+			}
+		}
 
 	}
 

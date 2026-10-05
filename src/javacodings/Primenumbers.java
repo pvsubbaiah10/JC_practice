@@ -26,13 +26,13 @@ public class Primenumbers {
 		// prime numbers print
 
 		
-		  int n = 300; int c = 0;
+		  int n = 200; int c = 0;
 		  
 		  for (int num = 100; num <= n; num++) {
 		  
 		   int count = 0;
 		  
-		   for (int i = 2; i <= Math.sqrt(num);i++)
+		   for (int i = 2; i <= Math.sqrt(num);i++) {
 		  
 		  if (num % i == 0) { 
 			  
@@ -40,13 +40,15 @@ public class Primenumbers {
 			  break; 
 		   }
 		  
-		  if (count == 0 ) { 
-			  c++;
-			  System.out.println(num + " ");
-		  
+
+		  }
+		   
+			if (count == 0) {
+				c++;
+				System.out.println(num + " ");
+
 		  }
 		  }
-		  
 		  System.out.println("prime count " + c);
 		 
 
